@@ -8,7 +8,7 @@ class IntervalTest {
 	
 	class Interval {
 		int ondergrens;
-		int bovengrens;
+		int lengte;
 	}
 	
 	int getOndergrens(Interval interval) {
@@ -16,7 +16,7 @@ class IntervalTest {
 	}
 	
 	int getBovengrens(Interval interval) {
-		return interval.bovengrens;
+		return interval.ondergrens + interval.lengte;
 	}
 	
 	void setOndergrens(Interval interval, int waarde) {
@@ -24,11 +24,11 @@ class IntervalTest {
 	}
 	
 	void setBovengrens(Interval interval, int waarde) {
-		interval.bovengrens = waarde;
+		interval.lengte = waarde - interval.ondergrens;
 	}
 	
 	int getLength(Interval interval) {
-		return interval.bovengrens - interval.ondergrens;
+		return interval.lengte;
 	}
 	
 	@Test
