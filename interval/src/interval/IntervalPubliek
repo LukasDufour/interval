@@ -1,0 +1,53 @@
+package interval;
+
+/**
+ * Each instance of this class represents an interval.
+ * 
+ * @invar De lengte is gelijk aan de bovengrens min de ondergrens.
+ *     | getLength() == getBovengrens() - getOndergrens()
+ * @invar De bovengrens is niet kleiner dan de ondergrens
+ *     | getOndergrens() <= getBovengrens()
+ */
+
+public class Interval {
+	public int getOndergrens()
+	
+	public int getBovengrens()
+	
+	public int getLength()
+	
+	/**
+	 * Stelt de ondergrens in.
+	 * Laat de bovengrens ongewijzigd.
+	 * 
+	 * @throws IllegalArgumentException als de waarde groter is dan de bovengrens
+	 *     | getBovengrens() < waarde
+	 * 
+	 * @post De ondergrens is gelijk aan de gegeven waarde.
+	 *     | getOndergrens() == waarde
+	 * @post De bovengrens blijft ongewijzigd
+	 *     | getBovengrens() == old(getBovengrens())
+	 *     
+	 * @mutates | this
+	 */
+	
+	public void setOndergrens(int waarde)
+	
+	/**
+	 * Stelt de bovengrens in.
+	 * Laat de ondergrens ongewijzigd.
+	 * 
+	 * @throws IllegalArgumentException
+	 *     | waarde < getOndergrens()
+	 * 
+	 * @post De bovengrens is gelijk aan de gegeven waarde.
+	 *     | getBovengrens() == waarde
+	 * @post De ondergrens blijft ongewijzigd
+	 *     | getOndergrens() == old(getOndergrens())
+	 * 
+	 * @mutates | this
+	 */
+	
+	public void setBovengrens(int waarde) 
+	
+}
